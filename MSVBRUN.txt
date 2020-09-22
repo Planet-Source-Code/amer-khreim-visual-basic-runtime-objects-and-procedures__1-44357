@@ -1,0 +1,1167 @@
+VBRUN; // Visual Basic runtime objects and procedures
+
+Enum PaletteModeConstants; // Constants for the PaletteMode property (Form, UserControl, UserDocument, PropertyPage, ActiveX Designer).
+GUID={531AFF40-D9E9-11CF-B307-00A0C90AEA82};
+  vbPaletteModeHalftone = 0;
+  vbPaletteModeUseZOrder = 1;
+  vbPaletteModeCustom = 2;
+  vbPaletteModeContainer = 3;
+  vbPaletteModeNone = 4;
+  vbPaletteModeObject = 5;
+
+Enum AsyncTypeConstants; // Constants used for the AsyncRead method
+GUID={35239020-BFE5-11CF-B2E4-00A0C90AEA82};
+  vbAsyncTypePicture = 0;
+  vbAsyncTypeFile = 1;
+  vbAsyncTypeByteArray = 2;
+
+Enum AsyncReadConstants; // Options for AsyncRead.  The default behavior is to asynchronously download checking the server version once per-application lifetime. Some constants can be combined.
+GUID={C6879C62-6FFA-11D1-A3AF-00A0C90AEA82};
+  vbAsyncReadSynchronousDownload = 1;
+  vbAsyncReadOfflineOperation = 8;
+  vbAsyncReadForceUpdate = 16;
+  vbAsyncReadResynchronize = $200;
+  vbAsyncReadGetFromCacheIfNetFail = $80000;
+
+Enum AsyncStatusCodeConstants; // Constants used for AsyncProperty.StatusCode property.
+GUID={6AA0C551-F895-11D0-B41D-00A0C90AEA82};
+  vbAsyncStatusCodeError = 0;
+  vbAsyncStatusCodeFindingResource = 1;
+  vbAsyncStatusCodeConnecting = 2;
+  vbAsyncStatusCodeRedirecting = 3;
+  vbAsyncStatusCodeBeginDownloadData = 4;
+  vbAsyncStatusCodeDownloadingData = 5;
+  vbAsyncStatusCodeEndDownloadData = 6;
+  vbAsyncStatusCodeUsingCachedCopy = 10;
+  vbAsyncStatusCodeSendingRequest = 11;
+  vbAsyncStatusCodeMIMETypeAvailable = 13;
+  vbAsyncStatusCodeCacheFileNameAvailable = 14;
+  vbAsyncStatusCodeBeginSyncOperation = 15;
+  vbAsyncStatusCodeEndSyncOperation = 16;
+
+Enum LogEventTypeConstants; // Constants used for Event Log types
+GUID={C983C420-2128-11D0-9440-00A0C90F26F1};
+  vbLogEventTypeError = 1;
+  vbLogEventTypeWarning = 2;
+  vbLogEventTypeInformation = 4;
+
+Enum QueryUnloadConstants; // Constants for the UnloadMode parameter of the QueryUnload event of a Form.
+GUID={AD4EF4C0-FAC9-11CF-8425-00A0C9110056};
+  vbFormControlMenu = 0;
+  vbFormCode = 1;
+  vbAppWindows = 2;
+  vbAppTaskManager = 3;
+  vbFormMDIForm = 4;
+  vbFormOwner = 5;
+
+Enum ZOrderConstants; // Constants for the ZOrder method.
+GUID={AD4EF4C1-FAC9-11CF-8425-00A0C9110056};
+  vbBringToFront = 0;
+  vbSendToBack = 1;
+
+Enum ShiftConstants; // Shift parameter constants (bitfields for the Shift parameter of various events).
+GUID={AD4EF4C2-FAC9-11CF-8425-00A0C9110056};
+  vbShiftMask = 1;
+  vbCtrlMask = 2;
+  vbAltMask = 4;
+
+Enum MouseButtonConstants; // Mouse button bitfield constants.
+GUID={AD4EF4C3-FAC9-11CF-8425-00A0C9110056};
+  vbLeftButton = 1;
+  vbRightButton = 2;
+  vbMiddleButton = 4;
+
+Enum ApplicationStartConstants; // Application start mode constants.
+GUID={AD4EF4C4-FAC9-11CF-8425-00A0C9110056};
+  vbSModeStandalone = 0;
+  vbSModeAutomation = 1;
+
+Enum ScrollBarConstants; // Scrollbar property constants.
+GUID={AD4EF4C5-FAC9-11CF-8425-00A0C9110056};
+  vbSBNone = 0;
+  vbHorizontal = 1;
+  vbVertical = 2;
+  vbBoth = 3;
+
+Enum ShapeConstants; // Constants for the Shape property of the Shape control.
+GUID={AD4EF4C6-FAC9-11CF-8425-00A0C9110056};
+  vbShapeRectangle = 0;
+  vbShapeSquare = 1;
+  vbShapeOval = 2;
+  vbShapeCircle = 3;
+  vbShapeRoundedRectangle = 4;
+  vbShapeRoundedSquare = 5;
+
+Enum PictureTypeConstants; // Picture Object type constants.
+GUID={AD4EF4C7-FAC9-11CF-8425-00A0C9110056};
+  vbPicTypeNone = 0;
+  vbPicTypeBitmap = 1;
+  vbPicTypeMetafile = 2;
+  vbPicTypeIcon = 3;
+  vbPicTypeEMetafile = 4;
+
+Enum ComboBoxConstants; // Constants for the Style property of a ComboBox control.
+GUID={AD4EF4C8-FAC9-11CF-8425-00A0C9110056};
+  vbComboDropdown = 0;
+  vbComboSimple = 1;
+  vbComboDropdownList = 2;
+
+Enum MultiSelectConstants; // Constants for the MultiSelect property of a ListBox.
+GUID={AD4EF4C9-FAC9-11CF-8425-00A0C9110056};
+  vbMultiSelectNone = 0;
+  vbMultiSelectSimple = 1;
+  vbMultiSelectExtended = 2;
+
+Enum DataErrorConstants; // Data control error event constants.
+GUID={AD4EF4CA-FAC9-11CF-8425-00A0C9110056};
+  vbDataErrContinue = 0;
+  vbDataErrDisplay = 1;
+
+Enum DataValidateConstants; // Data control validate event action constants.
+GUID={AD4EF4CB-FAC9-11CF-8425-00A0C9110056};
+  vbDataActionCancel = 0;
+  vbDataActionMoveFirst = 1;
+  vbDataActionMovePrevious = 2;
+  vbDataActionMoveNext = 3;
+  vbDataActionMoveLast = 4;
+  vbDataActionAddNew = 5;
+  vbDataActionUpdate = 6;
+  vbDataActionDelete = 7;
+  vbDataActionFind = 8;
+  vbDataActionBookmark = 9;
+  vbDataActionClose = 10;
+  vbDataActionUnload = 11;
+
+Enum DataBOFconstants; // Data control beginning-of-file constants.
+GUID={AD4EF4CC-FAC9-11CF-8425-00A0C9110056};
+  vbMoveFirst = 0;
+  vbBOF = 1;
+
+Enum DataEOFConstants; // Data control end-of-file constants.
+GUID={AD4EF4CD-FAC9-11CF-8425-00A0C9110056};
+  vbMoveLast = 0;
+  vbEOF = 1;
+  vbAddNew = 2;
+
+Module RecordsetTypeConstants; // Data control Recordset-type constants.
+  vbRSTypeTable = 0;
+  vbRSTypeDynaset = 1;
+  vbRSTypeSnapShot = 2;
+
+Enum DefaultCursorTypeConstants; // Cursor Driver-type constants.
+GUID={DFC5C6E0-08F1-11D0-A365-00A0C90F26FA};
+  vbUseDefaultCursor = 0;
+  vbUseODBCCursor = 1;
+  vbUseServersideCursor = 2;
+
+Enum VariantTypeConstants; // Variant type constants.
+GUID={AD4EF4CE-FAC9-11CF-8425-00A0C9110056};
+  vbVEmpty = 0;
+  vbVNull = 1;
+  vbVInteger = 2;
+  vbVLong = 3;
+  vbVSingle = 4;
+  vbVDouble = 5;
+  vbVCurrency = 6;
+  vbVDate = 7;
+  vbVString = 8;
+
+Enum LinkErrorConstants; // DDE LinkError event constants.
+GUID={AD4EF4D0-FAC9-11CF-8425-00A0C9110056};
+  vbWrongFormat = 1;
+  vbDDESourceClosed = 6;
+  vbTooManyLinks = 7;
+  vbDataTransferFailed = 8;
+
+Enum LinkModeConstants; // Constants for the LinkMode property.
+GUID={1791AB32-2F5A-11CE-8259-00AA006138F9};
+  vbLinkNone = 0;
+  vbLinkSource = 1;
+  vbLinkAutomatic = 1;
+  vbLinkManual = 2;
+  vbLinkNotify = 3;
+
+Enum OldLinkModeConstants; // Old constants for the LinkMode property (used for Visual Basic 1.0 compatibility).
+GUID={AD4EF4D1-FAC9-11CF-8425-00A0C9110056};
+  vbHot = 1;
+  vbServer = 1;
+  vbCold = 2;
+
+Enum ClipBoardConstants; // Clipboard format constants.
+GUID={AD4EF4D2-FAC9-11CF-8425-00A0C9110056};
+  vbCFLink = $FFFFBF00;
+  vbCFText = 1;
+  vbCFBitmap = 2;
+  vbCFMetafile = 3;
+  vbCFDIB = 8;
+  vbCFPalette = 9;
+  vbCFEMetafile = 14;
+  vbCFFiles = 15;
+  vbCFRTF = $FFFFBF01;
+
+Enum DragOverConstants; // State transition constants for the DragOver and OLEDragOver events.
+GUID={AD4EF4D3-FAC9-11CF-8425-00A0C9110056};
+  vbEnter = 0;
+  vbLeave = 1;
+  vbOver = 2;
+
+Enum DragConstants; // Constants for the Drag method.
+GUID={AD4EF4D4-FAC9-11CF-8425-00A0C9110056};
+  vbCancel = 0;
+  vbBeginDrag = 1;
+  vbEndDrag = 2;
+
+Enum DragModeConstants; // Constants for the DragMode property (but not the OLEDragMode or OLEDropMode properties).
+GUID={1791AB34-2F5A-11CE-8259-00AA006138F9};
+  vbManual = 0;
+  vbAutomatic = 1;
+
+Enum OLEDropEffectConstants; // Drop effect constants for OLE drag and drop events.
+GUID={AD4EF4D5-FAC9-11CF-8425-00A0C9110056};
+  vbDropEffectNone = 0;
+  vbDropEffectCopy = 1;
+  vbDropEffectMove = 2;
+  vbDropEffectScroll = $80000000;
+
+Enum OLEDragConstants; // Constants for the OLEDragMode property (but not the DragMode or OLEDropMode properties).
+GUID={AD4EF4D6-FAC9-11CF-8425-00A0C9110056};
+  vbOLEDragManual = 0;
+  vbOLEDragAutomatic = 1;
+
+Enum OLEDropConstants; // Constants for the OLEDropMode property (but not the DragMode or OLEDragMode properties).
+GUID={AD4EF4D7-FAC9-11CF-8425-00A0C9110056};
+  vbOLEDropNone = 0;
+  vbOLEDropManual = 1;
+  vbOLEDropAutomatic = 2;
+
+Enum FormShowConstants; // Constants for a Form's Show method.
+GUID={AD4EF4D8-FAC9-11CF-8425-00A0C9110056};
+  vbModeless = 0;
+  vbModal = 1;
+
+Enum FormArrangeConstants; // Constants for the Arrange method for MDI forms.
+GUID={AD4EF4D9-FAC9-11CF-8425-00A0C9110056};
+  vbCascade = 0;
+  vbTileHorizontal = 1;
+  vbTileVertical = 2;
+  vbArrangeIcons = 3;
+
+Enum FormWindowStateConstants; // Form WindowState property constants.
+GUID={F9C75340-5F26-11CE-95F0-00AA0051E510};
+  vbNormal = 0;
+  vbMinimized = 1;
+  vbMaximized = 2;
+
+Enum KeyCodeConstants; // Keycode constants.
+GUID={AD4EF4DA-FAC9-11CF-8425-00A0C9110056};
+  vbKeyLButton = 1;
+  vbKeyRButton = 2;
+  vbKeyCancel = 3;
+  vbKeyMButton = 4;
+  vbKeyBack = 8;
+  vbKeyTab = 9;
+  vbKeyClear = 12;
+  vbKeyReturn = 13;
+  vbKeyShift = 16;
+  vbKeyControl = 17;
+  vbKeyMenu = 18;
+  vbKeyPause = 19;
+  vbKeyCapital = 20;
+  vbKeyEscape = 27;
+  vbKeySpace = 32;
+  vbKeyPageUp = 33;
+  vbKeyPageDown = 34;
+  vbKeyEnd = 35;
+  vbKeyHome = 36;
+  vbKeyLeft = 37;
+  vbKeyUp = 38;
+  vbKeyRight = 39;
+  vbKeyDown = 40;
+  vbKeySelect = 41;
+  vbKeyPrint = 42;
+  vbKeyExecute = 43;
+  vbKeySnapshot = 44;
+  vbKeyInsert = 45;
+  vbKeyDelete = 46;
+  vbKeyHelp = 47;
+  vbKeyNumlock = 144;
+  vbKeyScrollLock = 145;
+  vbKeyA = 65;
+  vbKeyB = 66;
+  vbKeyC = 67;
+  vbKeyD = 68;
+  vbKeyE = 69;
+  vbKeyF = 70;
+  vbKeyG = 71;
+  vbKeyH = 72;
+  vbKeyI = 73;
+  vbKeyJ = 74;
+  vbKeyK = 75;
+  vbKeyL = 76;
+  vbKeyM = 77;
+  vbKeyN = 78;
+  vbKeyO = 79;
+  vbKeyP = 80;
+  vbKeyQ = 81;
+  vbKeyR = 82;
+  vbKeyS = 83;
+  vbKeyT = 84;
+  vbKeyU = 85;
+  vbKeyV = 86;
+  vbKeyW = 87;
+  vbKeyX = 88;
+  vbKeyY = 89;
+  vbKeyZ = 90;
+  vbKey0 = 48;
+  vbKey1 = 49;
+  vbKey2 = 50;
+  vbKey3 = 51;
+  vbKey4 = 52;
+  vbKey5 = 53;
+  vbKey6 = 54;
+  vbKey7 = 55;
+  vbKey8 = 56;
+  vbKey9 = 57;
+  vbKeyNumpad0 = 96;
+  vbKeyNumpad1 = 97;
+  vbKeyNumpad2 = 98;
+  vbKeyNumpad3 = 99;
+  vbKeyNumpad4 = 100;
+  vbKeyNumpad5 = 101;
+  vbKeyNumpad6 = 102;
+  vbKeyNumpad7 = 103;
+  vbKeyNumpad8 = 104;
+  vbKeyNumpad9 = 105;
+  vbKeyMultiply = 106;
+  vbKeyAdd = 107;
+  vbKeySeparator = 108;
+  vbKeySubtract = 109;
+  vbKeyDecimal = 110;
+  vbKeyDivide = 111;
+  vbKeyF1 = 112;
+  vbKeyF2 = 113;
+  vbKeyF3 = 114;
+  vbKeyF4 = 115;
+  vbKeyF5 = 116;
+  vbKeyF6 = 117;
+  vbKeyF7 = 118;
+  vbKeyF8 = 119;
+  vbKeyF9 = 120;
+  vbKeyF10 = 121;
+  vbKeyF11 = 122;
+  vbKeyF12 = 123;
+  vbKeyF13 = 124;
+  vbKeyF14 = 125;
+  vbKeyF15 = 126;
+  vbKeyF16 = 127;
+
+Enum MenuAccelConstants; // User-defined shortcut keystrokes
+GUID={AD4EF4DB-FAC9-11CF-8425-00A0C9110056};
+  vbMenuAccelCtrlA = 1;
+  vbMenuAccelCtrlB = 2;
+  vbMenuAccelCtrlC = 3;
+  vbMenuAccelCtrlD = 4;
+  vbMenuAccelCtrlE = 5;
+  vbMenuAccelCtrlF = 6;
+  vbMenuAccelCtrlG = 7;
+  vbMenuAccelCtrlH = 8;
+  vbMenuAccelCtrlI = 9;
+  vbMenuAccelCtrlJ = 10;
+  vbMenuAccelCtrlK = 11;
+  vbMenuAccelCtrlL = 12;
+  vbMenuAccelCtrlM = 13;
+  vbMenuAccelCtrlN = 14;
+  vbMenuAccelCtrlO = 15;
+  vbMenuAccelCtrlP = 16;
+  vbMenuAccelCtrlQ = 17;
+  vbMenuAccelCtrlR = 18;
+  vbMenuAccelCtrlS = 19;
+  vbMenuAccelCtrlT = 20;
+  vbMenuAccelCtrlU = 21;
+  vbMenuAccelCtrlV = 22;
+  vbMenuAccelCtrlW = 23;
+  vbMenuAccelCtrlX = 24;
+  vbMenuAccelCtrlY = 25;
+  vbMenuAccelCtrlZ = 26;
+  vbMenuAccelF1 = 27;
+  vbMenuAccelF2 = 28;
+  vbMenuAccelF3 = 29;
+  vbMenuAccelF4 = 30;
+  vbMenuAccelF5 = 31;
+  vbMenuAccelF6 = 32;
+  vbMenuAccelF7 = 33;
+  vbMenuAccelF8 = 34;
+  vbMenuAccelF9 = 35;
+  vbMenuAccelF11 = 36;
+  vbMenuAccelF12 = 37;
+  vbMenuAccelCtrlF1 = 38;
+  vbMenuAccelCtrlF2 = 39;
+  vbMenuAccelCtrlF3 = 40;
+  vbMenuAccelCtrlF4 = 41;
+  vbMenuAccelCtrlF5 = 42;
+  vbMenuAccelCtrlF6 = 43;
+  vbMenuAccelCtrlF7 = 44;
+  vbMenuAccelCtrlF8 = 45;
+  vbMenuAccelCtrlF9 = 46;
+  vbMenuAccelCtrlF11 = 47;
+  vbMenuAccelCtrlF12 = 48;
+  vbMenuAccelShiftF1 = 49;
+  vbMenuAccelShfitF2 = 50;
+  vbMenuAccelShiftF3 = 51;
+  vbMenuAccelShiftF4 = 52;
+  vbMenuAccelShiftF5 = 53;
+  vbMenuAccelShiftF6 = 54;
+  vbMenuAccelShiftF7 = 55;
+  vbMenuAccelShiftF8 = 56;
+  vbMenuAccelShiftF9 = 57;
+  vbMenuAccelShiftF11 = 58;
+  vbMenuAccelShiftF12 = 59;
+  vbMenuAccelShiftCtrlF1 = 60;
+  vbMenuAccelShiftCtrlF2 = 61;
+  vbMenuAccelShiftCtrlF3 = 62;
+  vbMenuAccelShiftCtrlF4 = 63;
+  vbMenuAccelShiftCtrlF5 = 64;
+  vbMenuAccelShiftCtrlF6 = 65;
+  vbMenuAccelShiftCtrlF7 = 66;
+  vbMenuAccelShiftCtrlF8 = 67;
+  vbMenuAccelShiftCtrlF9 = 68;
+  vbMenuAccelShiftCtrlF11 = 69;
+  vbMenuAccelShiftCtrlF12 = 70;
+  vbMenuAccelCtrlIns = 71;
+  vbMenuAccelShiftIns = 72;
+  vbMenuAccelDel = 73;
+  vbMenuAccelShiftDel = 74;
+  vbMenuAccelAltBksp = 75;
+
+Enum ColorConstants; // Color constants (see also SystemColorConstants).
+GUID={AD4EF4DC-FAC9-11CF-8425-00A0C9110056};
+  vbBlack = 0;
+  vbRed = 255;
+  vbGreen = $FF00;
+  vbYellow = $FFFF;
+  vbBlue = $FF0000;
+  vbMagenta = $FF00FF;
+  vbCyan = $FFFF00;
+  vbWhite = $FFFFFF;
+
+Enum SystemColorConstants; // System color constants (see also ColorConstants).
+GUID={AD4EF4DD-FAC9-11CF-8425-00A0C9110056};
+  vbScrollBars = $80000000;
+  vbDesktop = $80000001;
+  vbActiveTitleBar = $80000002;
+  vbInactiveTitleBar = $80000003;
+  vbMenuBar = $80000004;
+  vbWindowBackground = $80000005;
+  vbWindowFrame = $80000006;
+  vbMenuText = $80000007;
+  vbWindowText = $80000008;
+  vbTitleBarText = $80000009;
+  vbActiveBorder = $8000000A;
+  vbInactiveBorder = $8000000B;
+  vbApplicationWorkspace = $8000000C;
+  vbHighlight = $8000000D;
+  vbHighlightText = $8000000E;
+  vbButtonFace = $8000000F;
+  vbButtonShadow = $80000010;
+  vbGrayText = $80000011;
+  vbButtonText = $80000012;
+  vbActiveTitleBarText = $80000009;
+  vbInactiveTitleBarText = $80000013;
+  vbInactiveCaptionText = $80000013;
+  vb3DHighlight = $80000014;
+  vb3DFace = $8000000F;
+  vb3DShadow = $80000010;
+  vb3DDKShadow = $80000015;
+  vb3DLight = $80000016;
+  vbInfoText = $80000017;
+  vbInfoBackground = $80000018;
+
+Enum AlignConstants; // Constants for the Align property.
+GUID={1791AB33-2F5A-11CE-8259-00AA006138F9};
+  vbAlignNone = 0;
+  vbAlignTop = 1;
+  vbAlignBottom = 2;
+  vbAlignLeft = 3;
+  vbAlignRight = 4;
+
+Enum AlignmentConstants; // Constants for the Alignment property.
+GUID={AD4EF4DE-FAC9-11CF-8425-00A0C9110056};
+  vbLeftJustify = 0;
+  vbRightJustify = 1;
+  vbCenter = 2;
+
+Enum FormBorderStyleConstants; // Form BorderStyle property constants.
+GUID={F9C75341-5F26-11CE-95F0-00AA0051E510};
+  vbBSNone = 0;
+  vbFixedSingle = 1;
+  vbSizable = 2;
+  vbFixedDouble = 3;
+  vbFixedDialog = 3;
+  vbFixedToolWindow = 4;
+  vbSizableToolWindow = 5;
+
+Enum BorderStyleConstants; // Constants for the BorderStyle property of controls (not Forms).
+GUID={AD4EF4DF-FAC9-11CF-8425-00A0C9110056};
+  vbTransparent = 0;
+  vbBSSolid = 1;
+  vbBSDash = 2;
+  vbBSDot = 3;
+  vbBSDashDot = 4;
+  vbBSDashDotDot = 5;
+  vbBSInsideSolid = 6;
+
+Enum MousePointerConstants; // MousePointer property constants.
+GUID={AD4EF4E0-FAC9-11CF-8425-00A0C9110056};
+  vbDefault = 0;
+  vbArrow = 1;
+  vbCrosshair = 2;
+  vbIbeam = 3;
+  vbIconPointer = 4;
+  vbSizePointer = 5;
+  vbSizeNESW = 6;
+  vbSizeNS = 7;
+  vbSizeNWSE = 8;
+  vbSizeWE = 9;
+  vbUpArrow = 10;
+  vbHourglass = 11;
+  vbNoDrop = 12;
+  vbArrowHourglass = 13;
+  vbArrowQuestion = 14;
+  vbSizeAll = 15;
+  vbCustom = 99;
+
+Enum DrawModeConstants; // DrawMode property constants.
+GUID={AD4EF4E1-FAC9-11CF-8425-00A0C9110056};
+  vbBlackness = 1;
+  vbNotMergePen = 2;
+  vbMaskNotPen = 3;
+  vbNotCopyPen = 4;
+  vbMaskPenNot = 5;
+  vbInvert = 6;
+  vbXorPen = 7;
+  vbNotMaskPen = 8;
+  vbMaskPen = 9;
+  vbNotXorPen = 10;
+  vbNop = 11;
+  vbMergeNotPen = 12;
+  vbCopyPen = 13;
+  vbMergePenNot = 14;
+  vbMergePen = 15;
+  vbWhiteness = 16;
+
+Enum StartUpPositionConstants; // StartUpPosition property constants
+GUID={4BAE98E0-29DA-11D0-A369-00A0C90F26FA};
+  vbStartUpManual = 0;
+  vbStartUpOwner = 1;
+  vbStartUpScreen = 2;
+  vbStartUpWindowsDefault = 3;
+
+Enum DrawStyleConstants; // DrawStyle property constants.
+GUID={AD4EF4E2-FAC9-11CF-8425-00A0C9110056};
+  vbSolid = 0;
+  vbDash = 1;
+  vbDot = 2;
+  vbDashDot = 3;
+  vbDashDotDot = 4;
+  vbInvisible = 5;
+  vbInsideSolid = 6;
+
+Enum FillStyleConstants; // FillStyle property constants.
+GUID={AD4EF4E3-FAC9-11CF-8425-00A0C9110056};
+  vbFSSolid = 0;
+  vbFSTransparent = 1;
+  vbHorizontalLine = 2;
+  vbVerticalLine = 3;
+  vbUpwardDiagonal = 4;
+  vbDownwardDiagonal = 5;
+  vbCross = 6;
+  vbDiagonalCross = 7;
+
+Enum ScaleModeConstants; // ScaleMode property constants.
+GUID={AD4EF4E4-FAC9-11CF-8425-00A0C9110056};
+  vbUser = 0;
+  vbTwips = 1;
+  vbPoints = 2;
+  vbPixels = 3;
+  vbCharacters = 4;
+  vbInches = 5;
+  vbMillimeters = 6;
+  vbCentimeters = 7;
+  vbHimetric = 8;
+  vbContainerPosition = 9;
+  vbContainerSize = 10;
+
+Enum OLEContainerConstants; // Miscellaneous OLE container control properties.
+GUID={AD4EF4E5-FAC9-11CF-8425-00A0C9110056};
+  vbOLELinked = 0;
+  vbOLEEmbedded = 1;
+  vbOLENone = 3;
+  vbOLEEither = 2;
+  vbOLEAutomatic = 0;
+  vbOLEFrozen = 1;
+  vbOLEManual = 2;
+  vbOLEActivateManual = 0;
+  vbOLEActivateGetFocus = 1;
+  vbOLEActivateDoubleclick = 2;
+  vbOLEActivateAuto = 3;
+  vbOLESizeClip = 0;
+  vbOLESizeStretch = 1;
+  vbOLESizeAutoSize = 2;
+  vbOLESizeZoom = 3;
+  vbOLEDisplayContent = 0;
+  vbOLEDisplayIcon = 1;
+  vbOLEChanged = 0;
+  vbOLESaved = 1;
+  vbOLEClosed = 2;
+  vbOLERenamed = 3;
+  vbOLEPrimary = 0;
+  vbOLEShow = -1;
+  vbOLEOpen = -2;
+  vbOLEHide = -3;
+  vbOLEUIActivate = -4;
+  vbOLEInPlaceActivate = -5;
+  vbOLEDiscardUndoState = -6;
+  vbOLEFlagGrayed = 1;
+  vbOLEFlagDisabled = 2;
+  vbOLEFlagChecked = 8;
+  vbOLEFlagSeparator = $800;
+  vbOLEMiscFlagMemStorage = 1;
+  vbOLEMiscFlagDisableInPlace = 2;
+
+Enum MenuControlConstants; // Miscellaneous Menu control constants.
+GUID={AD4EF4E6-FAC9-11CF-8425-00A0C9110056};
+  vbPopupMenuLeftAlign = 0;
+  vbPopupMenuCenterAlign = 4;
+  vbPopupMenuRightAlign = 8;
+  vbPopupMenuLeftButton = 0;
+  vbPopupMenuRightButton = 2;
+
+Enum PrinterObjectConstants; // Miscellaneous Printer object constants.
+GUID={AD4EF4E7-FAC9-11CF-8425-00A0C9110056};
+  vbPRCMMonochrome = 1;
+  vbPRCMColor = 2;
+  vbPRDPSimplex = 1;
+  vbPRDPHorizontal = 2;
+  vbPRDPVertical = 3;
+  vbPRORPortrait = 1;
+  vbPRORLandscape = 2;
+  vbPRPQDraft = -1;
+  vbPRPQLow = -2;
+  vbPRPQMedium = -3;
+  vbPRPQHigh = -4;
+  vbPRBNUpper = 1;
+  vbPRBNLower = 2;
+  vbPRBNMiddle = 3;
+  vbPRBNManual = 4;
+  vbPRBNEnvelope = 5;
+  vbPRBNEnvManual = 6;
+  vbPRBNAuto = 7;
+  vbPRBNTractor = 8;
+  vbPRBNSmallFmt = 9;
+  vbPRBNLargeFmt = 10;
+  vbPRBNLargeCapacity = 11;
+  vbPRBNCassette = 14;
+  vbPRPSLetter = 1;
+  vbPRPSLetterSmall = 2;
+  vbPRPSTabloid = 3;
+  vbPRPSLedger = 4;
+  vbPRPSLegal = 5;
+  vbPRPSStatement = 6;
+  vbPRPSExecutive = 7;
+  vbPRPSA3 = 8;
+  vbPRPSA4 = 9;
+  vbPRPSA4Small = 10;
+  vbPRPSA5 = 11;
+  vbPRPSB4 = 12;
+  vbPRPSB5 = 13;
+  vbPRPSFolio = 14;
+  vbPRPSQuarto = 15;
+  vbPRPS10x14 = 16;
+  vbPRPS11x17 = 17;
+  vbPRPSNote = 18;
+  vbPRPSEnv9 = 19;
+  vbPRPSEnv10 = 20;
+  vbPRPSEnv11 = 21;
+  vbPRPSEnv12 = 22;
+  vbPRPSEnv14 = 23;
+  vbPRPSCSheet = 24;
+  vbPRPSDSheet = 25;
+  vbPRPSESheet = 26;
+  vbPRPSEnvDL = 27;
+  vbPRPSEnvC3 = 29;
+  vbPRPSEnvC4 = 30;
+  vbPRPSEnvC5 = 28;
+  vbPRPSEnvC6 = 31;
+  vbPRPSEnvC65 = 32;
+  vbPRPSEnvB4 = 33;
+  vbPRPSEnvB5 = 34;
+  vbPRPSEnvB6 = 35;
+  vbPRPSEnvItaly = 36;
+  vbPRPSEnvMonarch = 37;
+  vbPRPSEnvPersonal = 38;
+  vbPRPSFanfoldUS = 39;
+  vbPRPSFanfoldStdGerman = 40;
+  vbPRPSFanfoldLglGerman = 41;
+  vbPRPSUser = $100;
+
+Enum RasterOpConstants; // Opcode constants for the PaintPicture method.
+GUID={AD4EF4E8-FAC9-11CF-8425-00A0C9110056};
+  vbDstInvert = $550009;
+  vbMergeCopy = $C000CA;
+  vbMergePaint = $BB0226;
+  vbNotSrcCopy = $330008;
+  vbNotSrcErase = $1100A6;
+  vbSrcAnd = $8800C6;
+  vbSrcCopy = $CC0020;
+  vbSrcErase = $440328;
+  vbSrcInvert = $660046;
+  vbSrcPaint = $EE0086;
+  vbPatCopy = $F00021;
+  vbPatPaint = $FB0A09;
+  vbPatInvert = $5A0049;
+
+Enum CheckBoxConstants; // Checkbox Value property constants.
+GUID={AD4EF4E9-FAC9-11CF-8425-00A0C9110056};
+  vbUnchecked = 0;
+  vbChecked = 1;
+  vbGrayed = 2;
+
+Enum LoadResConstants; // Constants for the LoadResData and LoadResPicture methods.
+GUID={AD4EF4EA-FAC9-11CF-8425-00A0C9110056};
+  vbResBitmap = 0;
+  vbResIcon = 1;
+  vbResCursor = 2;
+
+Enum ButtonConstants; // Button Constants (for CommandButton, CheckBox, and OptionButton).
+GUID={AD4EF4EB-FAC9-11CF-8425-00A0C9110056};
+  vbButtonStandard = 0;
+  vbButtonGraphical = 1;
+
+Enum ListBoxConstants; // ListBox Constants for the Style property.
+GUID={AD4EF4EC-FAC9-11CF-8425-00A0C9110056};
+  vbListBoxStandard = 0;
+  vbListBoxCheckbox = 1;
+
+Enum ParentControlsType; // Constants for the ParentControlsType property.
+GUID={73007F01-3D85-11D0-9469-00A0C91110ED};
+  vbNoExtender = 0;
+  vbExtender = 1;
+
+Enum LoadPictureSizeConstants; // Constants used for LoadPicture Size.
+GUID={8D2DA731-ED9D-11D0-A1BB-00A0C90F2731};
+  vbLPSmall = 0;
+  vbLPLarge = 1;
+  vbLPSmallShell = 2;
+  vbLPLargeShell = 3;
+  vbLPCustom = 4;
+
+Enum LoadPictureColorConstants; // Constants used for LoadPicture ColorDepth.
+GUID={0F2F26F0-ED9E-11D0-A1BB-00A0C90F2731};
+  vbLPDefault = 0;
+  vbLPMonochrome = 1;
+  vbLPVGAColor = 2;
+  vbLPColor = 3;
+
+Enum HitResultConstants; // Constants used for HitResult parameter of HitTest event
+GUID={7C5FCAA0-549F-11D1-A1E1-00A0C90F2731};
+  vbHitResultOutside = 0;
+  vbHitResultTransparent = 1;
+  vbHitResultClose = 2;
+  vbHitResultHit = 3;
+
+Enum LogModeConstants; // Constants for the App object's LogMode property
+GUID={FD062850-343A-11D1-84FB-00A0C90DC8A9};
+  vbLogAuto = 0;
+  vbLogOff = 1;
+  vbLogToFile = 2;
+  vbLogToNT = 3;
+  vbLogOverwrite = 16;
+  vbLogThreadID = 32;
+
+Dispatch PropertyBag_VB5; // VB5 version of PropertyBag interface.  Use this interface to maintain binary compatibility with VB5 projects that use this interface.
+GUID={45046D60-08CA-11CF-A90F-00AA0062BB4C};
+  function QueryInterface(riid:^GUID; out ppvObj:^^void);
+  function AddRef: UI4;
+  function Release: UI4;
+  function GetTypeInfoCount(out pctinfo:^UINT);
+  function GetTypeInfo(itinfo:UINT; lcid:UI4; out pptinfo:^^void);
+  function GetIDsOfNames(riid:^GUID; rgszNames:^^I1; cNames:UINT; lcid:UI4; out rgdispid:^I4);
+  function Invoke(dispidMember:I4; riid:^GUID; lcid:UI4; wFlags:UI2; pdispparams:^DISPPARAMS; out pvarResult:^variant; out pexcepinfo:^EXCEPINFO; out puArgErr:^UINT);
+  function ReadProperty(Name:BSTR; [DefaultValue:variant]): variant;
+  function WriteProperty(Name:BSTR; Value:variant; [DefaultValue:variant]);
+
+Dispatch _PropertyBag; // A PropertyBag object holds information that is to be persisted across invocations of a control.
+GUID={4495AD01-C993-11D1-A3E4-00A0C90AEA82};
+  function QueryInterface(riid:^GUID; out ppvObj:^^void);
+  function AddRef: UI4;
+  function Release: UI4;
+  function GetTypeInfoCount(out pctinfo:^UINT);
+  function GetTypeInfo(itinfo:UINT; lcid:UI4; out pptinfo:^^void);
+  function GetIDsOfNames(riid:^GUID; rgszNames:^^I1; cNames:UINT; lcid:UI4; out rgdispid:^I4);
+  function Invoke(dispidMember:I4; riid:^GUID; lcid:UI4; wFlags:UI2; pdispparams:^DISPPARAMS; out pvarResult:^variant; out pexcepinfo:^EXCEPINFO; out puArgErr:^UINT);
+  function ReadProperty(Name:BSTR; [DefaultValue:variant]): variant;
+  function WriteProperty(Name:BSTR; Value:variant; [DefaultValue:variant]);
+  property-get Contents: variant;
+  property-put Contents(variant);
+
+Class PropertyBag; // A PropertyBag object holds information that is to be persisted across invocations of a control.
+GUID={D5DE8D20-5BB8-11D1-A1E3-00A0C90F2731};
+  function QueryInterface(riid:^GUID; out ppvObj:^^void);
+  function AddRef: UI4;
+  function Release: UI4;
+  function GetTypeInfoCount(out pctinfo:^UINT);
+  function GetTypeInfo(itinfo:UINT; lcid:UI4; out pptinfo:^^void);
+  function GetIDsOfNames(riid:^GUID; rgszNames:^^I1; cNames:UINT; lcid:UI4; out rgdispid:^I4);
+  function Invoke(dispidMember:I4; riid:^GUID; lcid:UI4; wFlags:UI2; pdispparams:^DISPPARAMS; out pvarResult:^variant; out pexcepinfo:^EXCEPINFO; out puArgErr:^UINT);
+  function ReadProperty(Name:BSTR; [DefaultValue:variant]): variant;
+  function WriteProperty(Name:BSTR; Value:variant; [DefaultValue:variant]);
+  property-get Contents: variant;
+  property-put Contents(variant);
+
+Dispatch DataObjectFiles; // The DataObjectFiles object is a collection of filenames used by the DataObject object (vbCFFiles format only).
+GUID={41A7D761-6018-11CF-9016-00AA0068841E};
+  function QueryInterface(riid:^GUID; out ppvObj:^^void);
+  function AddRef: UI4;
+  function Release: UI4;
+  function GetTypeInfoCount(out pctinfo:^UINT);
+  function GetTypeInfo(itinfo:UINT; lcid:UI4; out pptinfo:^^void);
+  function GetIDsOfNames(riid:^GUID; rgszNames:^^I1; cNames:UINT; lcid:UI4; out rgdispid:^I4);
+  function Invoke(dispidMember:I4; riid:^GUID; lcid:UI4; wFlags:UI2; pdispparams:^DISPPARAMS; out pvarResult:^variant; out pexcepinfo:^EXCEPINFO; out puArgErr:^UINT);
+  property-get Item(index:I4): BSTR;
+  property-get Count: I4;
+  function Add(Filename:BSTR; [index:variant]);
+  function Clear;
+  function Remove(index:variant);
+  function _NewEnum: IUnknown;
+
+Dispatch DataObject; // The DataObject object is used for specifying formats and data that will be supported for OLE drag and drop operations.
+GUID={41A7D760-6018-11CF-9016-00AA0068841E};
+  function QueryInterface(riid:^GUID; out ppvObj:^^void);
+  function AddRef: UI4;
+  function Release: UI4;
+  function GetTypeInfoCount(out pctinfo:^UINT);
+  function GetTypeInfo(itinfo:UINT; lcid:UI4; out pptinfo:^^void);
+  function GetIDsOfNames(riid:^GUID; rgszNames:^^I1; cNames:UINT; lcid:UI4; out rgdispid:^I4);
+  function Invoke(dispidMember:I4; riid:^GUID; lcid:UI4; wFlags:UI2; pdispparams:^DISPPARAMS; out pvarResult:^variant; out pexcepinfo:^EXCEPINFO; out puArgErr:^UINT);
+  function Clear;
+  function SetData([Value:variant; Format:variant]);
+  function GetData(Format:I2): variant;
+  function GetFormat(Format:I2): bool;
+  property-get Files: ^DataObjectFiles;
+
+Dispatch AmbientProperties; // The AmbientProperties object allows access to the ambient properties of the container.
+GUID={B28FA150-0FF0-11CF-A911-00AA0062BB4C};
+  function QueryInterface(riid:^GUID; out ppvObj:^^void);
+  function AddRef: UI4;
+  function Release: UI4;
+  function GetTypeInfoCount(out pctinfo:^UINT);
+  function GetTypeInfo(itinfo:UINT; lcid:UI4; out pptinfo:^^void);
+  function GetIDsOfNames(riid:^GUID; rgszNames:^^I1; cNames:UINT; lcid:UI4; out rgdispid:^I4);
+  function Invoke(dispidMember:I4; riid:^GUID; lcid:UI4; wFlags:UI2; pdispparams:^DISPPARAMS; out pvarResult:^variant; out pexcepinfo:^EXCEPINFO; out puArgErr:^UINT);
+  property-get BackColor: OLE_COLOR;
+  property-get DisplayName: BSTR;
+  property-get Font: ^IFontDisp;
+  property-get ForeColor: OLE_COLOR;
+  property-get LocaleID: I4;
+  property-get MessageReflect: bool;
+  property-get ScaleUnits: BSTR;
+  property-get TextAlign: I2;
+  property-get UserMode: bool;
+  property-get UIDead: bool;
+  property-get ShowGrabHandles: bool;
+  property-get ShowHatching: bool;
+  property-get DisplayAsDefault: bool;
+  property-get SupportsMnemonics: bool;
+  property-get Palette: ^IPictureDisp;
+  property-get RightToLeft: bool;
+
+Dispatch SelectedControls; // A collection object that can contain all the currently selected controls on an object.
+GUID={2CE46480-1A08-11CF-AD63-00AA00614F3E};
+  function QueryInterface(riid:^GUID; out ppvObj:^^void);
+  function AddRef: UI4;
+  function Release: UI4;
+  function GetTypeInfoCount(out pctinfo:^UINT);
+  function GetTypeInfo(itinfo:UINT; lcid:UI4; out pptinfo:^^void);
+  function GetIDsOfNames(riid:^GUID; rgszNames:^^I1; cNames:UINT; lcid:UI4; out rgdispid:^I4);
+  function Invoke(dispidMember:I4; riid:^GUID; lcid:UI4; wFlags:UI2; pdispparams:^DISPPARAMS; out pvarResult:^variant; out pexcepinfo:^EXCEPINFO; out puArgErr:^UINT);
+  property-get Count: I4;
+  property-get Item(index:I4): IDispatch;
+  function _NewEnum: IUnknown;
+
+Dispatch ParentControls; // A collection that allows access to the other controls in the control's container.
+GUID={BE8F9800-2AAA-11CF-AD67-00AA00614F3E};
+  function QueryInterface(riid:^GUID; out ppvObj:^^void);
+  function AddRef: UI4;
+  function Release: UI4;
+  function GetTypeInfoCount(out pctinfo:^UINT);
+  function GetTypeInfo(itinfo:UINT; lcid:UI4; out pptinfo:^^void);
+  function GetIDsOfNames(riid:^GUID; rgszNames:^^I1; cNames:UINT; lcid:UI4; out rgdispid:^I4);
+  function Invoke(dispidMember:I4; riid:^GUID; lcid:UI4; wFlags:UI2; pdispparams:^DISPPARAMS; out pvarResult:^variant; out pexcepinfo:^EXCEPINFO; out puArgErr:^UINT);
+  property-get Count: I4;
+  property-get Item(index:I4): IDispatch;
+  function _NewEnum: IUnknown;
+  property-get ParentControlsType: ParentControlsType;
+  property-put ParentControlsType(ParentControlsType);
+
+Dispatch ContainedControls; // A collection that allows access to the controls contained within the control that were added to the control by the developer who uses the control.
+GUID={C0324960-2AAA-11CF-AD67-00AA00614F3E};
+  function QueryInterface(riid:^GUID; out ppvObj:^^void);
+  function AddRef: UI4;
+  function Release: UI4;
+  function GetTypeInfoCount(out pctinfo:^UINT);
+  function GetTypeInfo(itinfo:UINT; lcid:UI4; out pptinfo:^^void);
+  function GetIDsOfNames(riid:^GUID; rgszNames:^^I1; cNames:UINT; lcid:UI4; out rgdispid:^I4);
+  function Invoke(dispidMember:I4; riid:^GUID; lcid:UI4; wFlags:UI2; pdispparams:^DISPPARAMS; out pvarResult:^variant; out pexcepinfo:^EXCEPINFO; out puArgErr:^UINT);
+  property-get Count: I4;
+  property-get Item(index:I4): IDispatch;
+  function _NewEnum: IUnknown;
+
+Dispatch DataBindings; // DataBindings is a collection of DataBinding objects.
+GUID={D4E0F020-720A-11CF-8136-00AA00C14959};
+  function QueryInterface(riid:^GUID; out ppvObj:^^void);
+  function AddRef: UI4;
+  function Release: UI4;
+  function GetTypeInfoCount(out pctinfo:^UINT);
+  function GetTypeInfo(itinfo:UINT; lcid:UI4; out pptinfo:^^void);
+  function GetIDsOfNames(riid:^GUID; rgszNames:^^I1; cNames:UINT; lcid:UI4; out rgdispid:^I4);
+  function Invoke(dispidMember:I4; riid:^GUID; lcid:UI4; wFlags:UI2; pdispparams:^DISPPARAMS; out pvarResult:^variant; out pexcepinfo:^EXCEPINFO; out puArgErr:^UINT);
+  property-get Count: I4;
+  property-get Item(_Index:variant): IDispatch;
+  function _NewEnum: IUnknown;
+
+Dispatch DataBinding; // An object describing the attributes of the property a control is bound to.
+GUID={7500A6BA-EB65-11D1-938D-0000F87557C9};
+  function QueryInterface(riid:^GUID; out ppvObj:^^void);
+  function AddRef: UI4;
+  function Release: UI4;
+  function GetTypeInfoCount(out pctinfo:^UINT);
+  function GetTypeInfo(itinfo:UINT; lcid:UI4; out pptinfo:^^void);
+  function GetIDsOfNames(riid:^GUID; rgszNames:^^I1; cNames:UINT; lcid:UI4; out rgdispid:^I4);
+  function Invoke(dispidMember:I4; riid:^GUID; lcid:UI4; wFlags:UI2; pdispparams:^DISPPARAMS; out pvarResult:^variant; out pexcepinfo:^EXCEPINFO; out puArgErr:^UINT);
+  property-get PropertyName: BSTR;
+  property-get DataField: BSTR;
+  property-put DataField(BSTR);
+  property-get DataChanged: bool;
+  property-put DataChanged(bool);
+  property-get DataSourceName: BSTR;
+  property-put DataSourceName(BSTR);
+  property-get IsDataSource: bool;
+  property-get IsBindable: bool;
+  property-get DataMember: DataMember;
+  property-put DataMember(DataMember);
+  property-get DataFormat: ^DataFormat;
+  property-putref DataFormat(^DataFormat);
+  property-get DataSource: ^DataSource;
+  property-putref DataSource(^DataSource);
+
+Dispatch EventParameter; // An object describing a single parameter of an event
+GUID={C4D651F0-7697-11D1-A1E9-00A0C90F2731};
+  function QueryInterface(riid:^GUID; out ppvObj:^^void);
+  function AddRef: UI4;
+  function Release: UI4;
+  function GetTypeInfoCount(out pctinfo:^UINT);
+  function GetTypeInfo(itinfo:UINT; lcid:UI4; out pptinfo:^^void);
+  function GetIDsOfNames(riid:^GUID; rgszNames:^^I1; cNames:UINT; lcid:UI4; out rgdispid:^I4);
+  function Invoke(dispidMember:I4; riid:^GUID; lcid:UI4; wFlags:UI2; pdispparams:^DISPPARAMS; out pvarResult:^variant; out pexcepinfo:^EXCEPINFO; out puArgErr:^UINT);
+  property-get Value: variant;
+  property-put Value(variant);
+  property-get Name: BSTR;
+
+Dispatch EventParameters; // A collection of EventParameter objects
+GUID={C4D651F1-7697-11D1-A1E9-00A0C90F2731};
+  function QueryInterface(riid:^GUID; out ppvObj:^^void);
+  function AddRef: UI4;
+  function Release: UI4;
+  function GetTypeInfoCount(out pctinfo:^UINT);
+  function GetTypeInfo(itinfo:UINT; lcid:UI4; out pptinfo:^^void);
+  function GetIDsOfNames(riid:^GUID; rgszNames:^^I1; cNames:UINT; lcid:UI4; out rgdispid:^I4);
+  function Invoke(dispidMember:I4; riid:^GUID; lcid:UI4; wFlags:UI2; pdispparams:^DISPPARAMS; out pvarResult:^variant; out pexcepinfo:^EXCEPINFO; out puArgErr:^UINT);
+  property-get Item(index:variant): ^EventParameter;
+  property-get Count: I4;
+  function _NewEnum: IUnknown;
+
+Dispatch EventInfo; // An object describing an event
+GUID={C4D651F2-7697-11D1-A1E9-00A0C90F2731};
+  function QueryInterface(riid:^GUID; out ppvObj:^^void);
+  function AddRef: UI4;
+  function Release: UI4;
+  function GetTypeInfoCount(out pctinfo:^UINT);
+  function GetTypeInfo(itinfo:UINT; lcid:UI4; out pptinfo:^^void);
+  function GetIDsOfNames(riid:^GUID; rgszNames:^^I1; cNames:UINT; lcid:UI4; out rgdispid:^I4);
+  function Invoke(dispidMember:I4; riid:^GUID; lcid:UI4; wFlags:UI2; pdispparams:^DISPPARAMS; out pvarResult:^variant; out pexcepinfo:^EXCEPINFO; out puArgErr:^UINT);
+  property-get Name: BSTR;
+  property-get EventParameters: ^EventParameters;
+
+Dispatch Hyperlink; // The Hyperlink object allows browser navigation in a suitable host
+GUID={888A5A60-B283-11CF-8AD5-00A0C90AEA82};
+  function QueryInterface(riid:^GUID; out ppvObj:^^void);
+  function AddRef: UI4;
+  function Release: UI4;
+  function GetTypeInfoCount(out pctinfo:^UINT);
+  function GetTypeInfo(itinfo:UINT; lcid:UI4; out pptinfo:^^void);
+  function GetIDsOfNames(riid:^GUID; rgszNames:^^I1; cNames:UINT; lcid:UI4; out rgdispid:^I4);
+  function Invoke(dispidMember:I4; riid:^GUID; lcid:UI4; wFlags:UI2; pdispparams:^DISPPARAMS; out pvarResult:^variant; out pexcepinfo:^EXCEPINFO; out puArgErr:^UINT);
+  function GoForward;
+  function GoBack;
+  function NavigateTo(Target:BSTR; Location:BSTR; FrameName:BSTR);
+
+Dispatch AsyncProperty_VB5; // VB5 version of the AsyncProperty interface.  Use this interface to maintain binary compatibility with VB5 projects that use this interface.
+GUID={14E469E0-BF61-11CF-8385-8F69D8F1350B};
+  function QueryInterface(riid:^GUID; out ppvObj:^^void);
+  function AddRef: UI4;
+  function Release: UI4;
+  function GetTypeInfoCount(out pctinfo:^UINT);
+  function GetTypeInfo(itinfo:UINT; lcid:UI4; out pptinfo:^^void);
+  function GetIDsOfNames(riid:^GUID; rgszNames:^^I1; cNames:UINT; lcid:UI4; out rgdispid:^I4);
+  function Invoke(dispidMember:I4; riid:^GUID; lcid:UI4; wFlags:UI2; pdispparams:^DISPPARAMS; out pvarResult:^variant; out pexcepinfo:^EXCEPINFO; out puArgErr:^UINT);
+  property-get Value: variant;
+  property-get AsyncType: AsyncTypeConstants;
+  property-get PropertyName: BSTR;
+
+Dispatch AsyncProperty; // The AsyncProperty object is passed in to the AsyncReadComplete and AsyncReadProgress events, and contains the results of the asynchronous read.
+GUID={CBB76011-C508-11D1-A3E3-00A0C90AEA82};
+  function QueryInterface(riid:^GUID; out ppvObj:^^void);
+  function AddRef: UI4;
+  function Release: UI4;
+  function GetTypeInfoCount(out pctinfo:^UINT);
+  function GetTypeInfo(itinfo:UINT; lcid:UI4; out pptinfo:^^void);
+  function GetIDsOfNames(riid:^GUID; rgszNames:^^I1; cNames:UINT; lcid:UI4; out rgdispid:^I4);
+  function Invoke(dispidMember:I4; riid:^GUID; lcid:UI4; wFlags:UI2; pdispparams:^DISPPARAMS; out pvarResult:^variant; out pexcepinfo:^EXCEPINFO; out puArgErr:^UINT);
+  property-get Value: variant;
+  property-get AsyncType: AsyncTypeConstants;
+  property-get PropertyName: BSTR;
+  property-get Target: BSTR;
+  property-get BytesRead: I4;
+  property-get BytesMax: I4;
+  property-get Status: BSTR;
+  property-get StatusCode: AsyncStatusCodeConstants;
+
+Dispatch DataMembers; // A collection of data members to show at design time for this data source.
+GUID={83C49FF0-B294-11D0-9488-00A0C91110ED};
+  function QueryInterface(riid:^GUID; out ppvObj:^^void);
+  function AddRef: UI4;
+  function Release: UI4;
+  function GetTypeInfoCount(out pctinfo:^UINT);
+  function GetTypeInfo(itinfo:UINT; lcid:UI4; out pptinfo:^^void);
+  function GetIDsOfNames(riid:^GUID; rgszNames:^^I1; cNames:UINT; lcid:UI4; out rgdispid:^I4);
+  function Invoke(dispidMember:I4; riid:^GUID; lcid:UI4; wFlags:UI2; pdispparams:^DISPPARAMS; out pvarResult:^variant; out pexcepinfo:^EXCEPINFO; out puArgErr:^UINT);
+  property-get Item(index:I4): DataMember;
+  property-get Count: I4;
+  function Add(DataMember:DataMember);
+  function Clear;
+  function Remove(index:variant);
+  function _NewEnum: IUnknown;
+
+Interface IClassModuleEvt;
+GUID={FCFB3D21-A0FA-1068-A738-08002B3371B5};
+  function Initialize: HResult;
+  function Terminate: HResult;
+
+Interface IDataSourceClassEvt;
+GUID={6B121A01-45DF-11D1-8907-00A0C9110049};
+  function Initialize: HResult;
+  function Terminate: HResult;
+  function GetDataMember(out DataMember:^BSTR; out Data:^IDispatch): HResult;
+
+Interface IPersistableClassEvt;
+GUID={6B121A02-45DF-11D1-8907-00A0C9110049};
+  function Initialize: HResult;
+  function Terminate: HResult;
+  function InitProperties: HResult;
+  function ReadProperties(out PropBag:^^_PropertyBag): HResult;
+  function WriteProperties(out PropBag:^^_PropertyBag): HResult;
+
+Interface IPersistableDataSourceClassEvt;
+GUID={6B121A03-45DF-11D1-8907-00A0C9110049};
+  function Initialize: HResult;
+  function Terminate: HResult;
+  function GetDataMember(out DataMember:^BSTR; out Data:^IDispatch): HResult;
+  function InitProperties: HResult;
+  function ReadProperties(out PropBag:^^_PropertyBag): HResult;
+  function WriteProperties(out PropBag:^^_PropertyBag): HResult;
+
+Interface IDataProviderClassEvt;
+GUID={6B121A04-45DF-11D1-8907-00A0C9110049};
+  function Initialize: HResult;
+  function Terminate: HResult;
+  function GetDataMember(out DataMember:^BSTR; out Data:^IDispatch): HResult;
+  function DataConnection(ConnectionString:^BSTR): HResult;
+
+Interface IPersistableDataProviderClassEvt;
+GUID={6B121A05-45DF-11D1-8907-00A0C9110049};
+  function Initialize: HResult;
+  function Terminate: HResult;
+  function GetDataMember(out DataMember:^BSTR; out Data:^IDispatch): HResult;
+  function DataConnection(ConnectionString:BSTR): HResult;
+  function InitProperties: HResult;
+  function ReadProperties(out PropBag:^^_PropertyBag): HResult;
+  function WriteProperties(out PropBag:^^_PropertyBag): HResult;
+
+Dispatch _DClass;
+GUID={FCFB3D2B-A0FA-1068-A738-08002B3371B5};
+
+Dispatch _DDataBoundClass;
+GUID={EB41E8C1-4442-11D1-8906-00A0C9110049};
+  function PropertyChanged(PropertyName:BSTR);
+  function CanPropertyChange(PropertyName:BSTR): bool;
+
+Dispatch _DDataSourceClass;
+GUID={EB41E8C2-4442-11D1-8906-00A0C9110049};
+  function DataMemberChanged(DataMember:DataMember);
+  property-get DataMembers: ^DataMembers;
+
+Dispatch _DDataBoundAndDataSourceClass;
+GUID={EB41E8C3-4442-11D1-8906-00A0C9110049};
+  function PropertyChanged(PropertyName:BSTR);
+  function CanPropertyChange(PropertyName:BSTR): bool;
+  function DataMemberChanged(DataMember:DataMember);
+  property-get DataMembers: ^DataMembers;
+
+Dispatch _DPersistableClass;
+GUID={EB41E8C4-4442-11D1-8906-00A0C9110049};
+  function PropertyChanged(PropertyName:BSTR);
+
+Dispatch _DPersistableDataSourceClass;
+GUID={EB41E8C5-4442-11D1-8906-00A0C9110049};
+  function PropertyChanged(PropertyName:BSTR);
+  function DataMemberChanged(DataMember:DataMember);
+  property-get DataMembers: ^DataMembers;
+
+Dispatch LicenseInfo; // An object returned by the Licenses collection that contains license information for a control.
+GUID={8284B8A2-A8A8-11D1-A3D2-00A0C90AEA82};
+  function QueryInterface(riid:^GUID; out ppvObj:^^void);
+  function AddRef: UI4;
+  function Release: UI4;
+  function GetTypeInfoCount(out pctinfo:^UINT);
+  function GetTypeInfo(itinfo:UINT; lcid:UI4; out pptinfo:^^void);
+  function GetIDsOfNames(riid:^GUID; rgszNames:^^I1; cNames:UINT; lcid:UI4; out rgdispid:^I4);
+  function Invoke(dispidMember:I4; riid:^GUID; lcid:UI4; wFlags:UI2; pdispparams:^DISPPARAMS; out pvarResult:^variant; out pexcepinfo:^EXCEPINFO; out puArgErr:^UINT);
+  property-get ProgId: BSTR;
+  property-get LicenseKey: BSTR;
+
+Dispatch Licenses; // A collection of LicenseInfo objects for use with Controls.Add.
+GUID={737361EC-467F-11D1-810F-0000F87557AA};
+  function QueryInterface(riid:^GUID; out ppvObj:^^void);
+  function AddRef: UI4;
+  function Release: UI4;
+  function GetTypeInfoCount(out pctinfo:^UINT);
+  function GetTypeInfo(itinfo:UINT; lcid:UI4; out pptinfo:^^void);
+  function GetIDsOfNames(riid:^GUID; rgszNames:^^I1; cNames:UINT; lcid:UI4; out rgdispid:^I4);
+  function Invoke(dispidMember:I4; riid:^GUID; lcid:UI4; wFlags:UI2; pdispparams:^DISPPARAMS; out pvarResult:^variant; out pexcepinfo:^EXCEPINFO; out puArgErr:^UINT);
+  property-get Item(index:variant): ^LicenseInfo;
+  property-get Count: I4;
+  function Add(ProgId:BSTR; LicenseKey:BSTR): BSTR;
+  function Clear;
+  function Remove(index:variant);
+  function _NewEnum: IUnknown;
+
+Interface IProjectControl;
+GUID={27F56410-6161-11D1-946E-00A0C90F26F1};
+  function RetainProject: HResult;
+  function UnloadProject: HResult;
+  function IsRetained(out Return:^bool): HResult;
+  function IsPermanent(out Return:^bool): HResult;
+
+Interface IVbeRuntimeHost;
+GUID={E43FD401-8715-11D1-98E7-00A0C9702442};
+  function get_AppObject(pguidTypeInfo:^GUID; out ppdispAppObject:^IDispatch): HResult;
